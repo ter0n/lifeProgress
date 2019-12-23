@@ -10,14 +10,17 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        val taskList = listOf("task1", "task2", "task3", "task4", "task5")
+        val taskList = listOf(
+            DailyTask("task1", true),
+            DailyTask("task2", false),
+            DailyTask("task3", true),
+            DailyTask("task4", true),
+            DailyTask("task5", false)
+        )
 
         val lvTaskAdapter = LVTasksAdapter(this, taskList)
 
         lv_tasks.adapter = lvTaskAdapter
 
-//        lv_tasks.setOnItemClickListener { parent, view, position, id ->
-//            Toast.makeText(this, taskList[position], Toast.LENGTH_SHORT).show()
-//        }
     }
 }
