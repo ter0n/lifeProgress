@@ -8,6 +8,7 @@ import android.widget.ArrayAdapter
 import kotlinx.android.synthetic.main.lv_tasks_item.view.*
 
 class LVTasksAdapter(context: Context, tasks: List<DailyTask>) : ArrayAdapter<DailyTask>(context, 0, tasks) {
+
     override fun getView(position: Int, convertView: View?, parent: ViewGroup): View {
         val taskVeiw = convertView ?: LayoutInflater.from(context).inflate(R.layout.lv_tasks_item, parent, false)
         val currentTask = getItem(position)
